@@ -303,6 +303,13 @@ console.log(sumYearFilms(movies));
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+//Correzione
+const getFromID = function (imdbID) {
+  const filmFromID = movies.filter((film) => film.imdbID === imdbID); //possiamo usare anche il find perche il find ne trova uno solo
+  return filmFromID;
+};
+getFromID("tt4154796");
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
