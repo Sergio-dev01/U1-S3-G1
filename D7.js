@@ -29,28 +29,38 @@ function genNumber() {
 }
 console.log(genNumber());
 
+// const tenRandomNumbers = genNumber(); per poter utilizzare l'array
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
 console.log("_______________________");
 
-function findNum() {
-  let arrayNum = [];
-  let finalArray = [];
-  for (i = 0; i < 10; i++) {
-    let num = Math.floor(Math.random() * 51);
-    arrayNum.push(num);
-    // console.log(arrayNum); verifico i numeri generati
+// function findNum() {
+//   let arrayNum = [];
+//   let finalArray = [];
+//   for (i = 0; i < 10; i++) {
+//     let num = Math.floor(Math.random() * 51);
+//     arrayNum.push(num);
+//     // console.log(arrayNum); verifico i numeri generati
 
-    if (num % 2 === 0) {
-      finalArray.push(num);
-    }
-  }
+//     if (num % 2 === 0) {
+//       finalArray.push(num);
+//     }
+//   }
 
-  return finalArray;
-}
-console.log(findNum());
+//   return finalArray;
+// }
+// console.log(findNum());
+
+//correzione (ho letto male la consegna)
+const getEven = function (array) {
+  const onlyEven = array.filter((num) => num % 2 === 0);
+  console.log(onlyEven);
+};
+
+getEven(genNumber);
 
 console.log("_______________________");
 
